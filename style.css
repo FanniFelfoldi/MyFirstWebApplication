@@ -1,0 +1,28 @@
+body {
+    background: #eeeeee; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #eeeeee 0%, #cccccc 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #eeeeee 0%,#cccccc 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #eeeeee 0%,#cccccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    text-align: center;
+    font-size: 22px;
+    text-align: center;
+}
+table {
+    width:60%;
+}
+th {
+    font-size: 30px;
+    background-color: #f9ddf9;
+    padding: 20px;
+}
+img {
+    width: 100px;
+    height: 90px;
+}
+.viewer {
+    text-align: center;
+    width: 300px;
+    height:200px;
+}
+
