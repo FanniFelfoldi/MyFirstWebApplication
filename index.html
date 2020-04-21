@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="photos" align="center">
+    <div class="gallery" align="center">
         
             <h1>Photo gallery</h1>
         
@@ -16,11 +16,14 @@
         
         
         <div class="viewer" align="center">
-            <button><img src="/Pictures/arrow.svg" alt="arrow"></button>
+            <button id="left"><img src="/Pictures/arrow.svg" alt="arrow"></button>
 
-            <img id="bigone" src="/Pictures/biscottini.jpg" alt="Biscuits">
-
-            <button id="second"><img src="/Pictures/arrow.svg" alt="arrow"></button>
+            <img id="photo">
+                <div class="grayContainer">
+                    <h2 id="photo-title">My first photo</h2>
+                    <p id="photo-description">This is a description of the current photo</p>
+                </div> 
+            <button id="right"><img src="/Pictures/arrow.svg" alt="arrow"></button>
         </div>
         
     </div>

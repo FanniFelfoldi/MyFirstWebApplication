@@ -16,6 +16,9 @@ h1 {
     padding: 20px;
     width: 60%; 
 }
+h3 {
+    font-size: 20px;
+}
 
 .viewer {
     text-align: center;
@@ -23,20 +26,49 @@ h1 {
     height:200px;
     background-color: white;
     flex-direction: row;
+    cursor: pointer;
+    position: relative;
 }
-#bigone {
+#left {
+    position: absolute;
+
+}
+#photo {
     height: 200px;
-    width:500px;
+    width:100%;
     margin-left: 0px;
     margin-right: 0px;
+    
 }
-#second {
+#right {
     transform: rotate(0.5turn);
     margin-left: 0px;
+    position: absolute;
 }
 
 button {
     font-size: 6px;
     height: 200px;
     margin-right: 0px;
+    margin-left: 0px;
+}
+.grayContainer {
+    position: absolute;
+    top: 120px;
+    left:32px;
+    background-color: lightgray;
+    backface-visibility: inherit;
+    width:90%
+}
+h2 {
+    font-size: 16px;
+    color: white;
+    text-align: left;
+    margin-top: 0;
+}
+p {
+    font-size: 12px;
+    color: white;
+    text-align: left;
+    margin-top: 0;
 }
