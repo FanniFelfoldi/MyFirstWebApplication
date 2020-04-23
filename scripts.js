@@ -74,3 +74,7 @@ $("#right").click (() => {
     currentPhoto++;
     loadPhoto(currentPhoto);
 })
+
+$("#right").click (() => {
+    console.log ("clicked")
+})
