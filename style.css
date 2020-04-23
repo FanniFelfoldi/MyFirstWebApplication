@@ -48,6 +48,7 @@ button {
     height: 300px;
     margin-right: 0px;
     margin-left: 0px;
+    cursor: pointer;
 }
 .grayContainer {
     position: absolute;

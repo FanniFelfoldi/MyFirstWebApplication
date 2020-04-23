@@ -53,6 +53,7 @@ var data9 = {
 };
 
 
+
 let imagesData = [data1, data2, data3, data4, data5, data6, data7, data8, data9,];
 let currentPhoto = 0;
 $("#photo").attr("src", imagesData[currentPhoto]);
@@ -70,4 +71,21 @@ $("#right").click (() => {
 $("#left").click (() => {
     currentPhoto--;
     loadPhoto(currentPhoto);
+})
+
+//ezt nezd meg https://www.youtube.com/watch?v=7ZO2RTMNSAY
+// hogy a legutolso kepre ugorjo - le kell meg ezt tisztazni
+left.addEventListener ("click", function (){
+    if(current===0) {
+        current = viewerImages.length;
+    }
+    slideLeft();
+})
+
+// hogy a legelso kepre ugorjo, le kell meg tisztazni a kodokat
+arrowRight.addEventListener ("click", function (){
+    if(current===sliderImages.length - 1) {
+        current = -1;
+    }
+    slideRight();
 })
