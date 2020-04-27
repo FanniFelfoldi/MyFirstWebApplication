@@ -99,8 +99,9 @@ $("#left").click (() => {
 
 let data = ["first", "second", "third"];
 
-data.forEach((item, index) => {
-  $('#photoScroll').append(`<div class="box" data-index="${index}">${item} (data-index="${index}")</div>`);
+imagesData.forEach((item, index) => {
+  $('#photoScroll').append(`
+    <div class="imageHolder" imagesData-index="${index}">${item} (imagesData-index="${index}")</div>`);
   $('.box').click((event) => {
     let indexClicked = $(event.target).attr('data-index');
     // indexClicked is now a string! if you need it as a number you have to change it
