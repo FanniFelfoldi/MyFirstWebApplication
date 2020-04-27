@@ -57,13 +57,17 @@ var data9 = {
 let imagesData = [data1, data2, data3, data4, data5, data6, data7, data8, data9,];
 let currentPhoto = 0;
 
+$('#photo').attr('src', imagesData[currentPhoto].photo);
+$('#photo-title').text(imagesData[currentPhoto].title);
+$('#photo-description').text(imagesData[currentPhoto].description);
+
 
 function loadTitle(photoNumber) {
 $("#photo").attr("src", imagesData[currentPhoto]);
 }
 
 function loadTitle(photoNumber) {
-    $('#phot-title').text(imagesData[photoNumber].title);
+    $('#photo-title').text(imagesData[photoNumber].title);
 }
 
 function loadDescription(photoNumber) {
