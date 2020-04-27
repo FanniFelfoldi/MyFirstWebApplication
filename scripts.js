@@ -57,7 +57,7 @@ var data9 = {
 };
 
 var currentPhoto = 0;
-var imagesData = [data1, data2, data3, data4, data5, data6]
+var imagesData = [data1, data2, data3, data4, data5, data6, data7, data8, data9]
 $('#photo').attr('src', imagesData[currentPhoto].photo);
 $('#photo-title').text(imagesData[currentPhoto].title);
 $('#photo-description').text(imagesData[currentPhoto].description);
@@ -77,3 +77,22 @@ function loadDescription(photoNumber) {
 }
 
 loadPhoto(currentPhoto);
+
+
+//jobbra balra nyilak
+
+$('#right').click(() => {
+    if (currentPhoto < 9) { currentPhoto++; }
+    loadPhoto(currentPhoto);
+    loadTitle(currentPhoto);
+    loadDescription(currentPhoto);
+});
+$("#left").click (() => {
+    if (currentPhoto > 0) { currentPhoto--; }
+    loadPhoto(currentPhoto);
+    loadTitle(currentPhoto);
+    loadDescription(currentPhoto);
+})
+
+
+//bottom part
