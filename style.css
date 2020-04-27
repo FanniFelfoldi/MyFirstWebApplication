@@ -52,7 +52,7 @@ button {
 }
 .grayContainer {
     position: absolute;
-    top: 250px;
+    top: 220px;
     left:32px;
     background-color: lightgray;
     opacity: 0.7; 
@@ -60,13 +60,13 @@ button {
 }
 h2 {
     font-size: 16px;
-    color: white;
+    color: grey;
     text-align: left;
     margin-top: 0;
 }
 p {
     font-size: 12px;
-    color: white;
+    color: grey;
     text-align: left;
     margin-top: 0;
 }
