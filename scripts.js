@@ -56,28 +56,46 @@ var data9 = {
 
 let imagesData = [data1, data2, data3, data4, data5, data6, data7, data8, data9,];
 let currentPhoto = 0;
-$("#photo").attr("src", imagesData[currentPhoto]);
 
-let loadPhoto = (photoNumber) => {
-    $("#photo").attr("src", imagesData[photoNumber].photo);
+
+function loadTitle(photoNumber) {
+$("#photo").attr("src", imagesData[currentPhoto]);
 }
-loadPhoto (currentPhoto);
+
+function loadTitle(photoNumber) {
+    $('#phot-title').text(imagesData[photoNumber].title);
+}
+
+function loadDescription(photoNumber) {
+    $('#photo-description').text(imagesData[photoNumber].description);
+}
+
+loadPhoto(currentPhoto);
+
+
+
+
 
 $("#right").click (() => {
     currentPhoto++;
     loadPhoto(currentPhoto);
+    loadTitle(currentPhoto);
+    loadDescription(currentPhoto);
 })
 
 $("#left").click (() => {
     currentPhoto--;
     loadPhoto(currentPhoto);
+    loadTitle(currentPhoto);
+    loadDescription(currentPhoto);
 })
 
 //ezt nezd meg https://www.youtube.com/watch?v=7ZO2RTMNSAY
 // hogy a legutolso kepre ugorjo - le kell meg ezt tisztazni
+
 left.addEventListener ("click", function (){
-    if(current===0) {
-        current = viewerImages.length;
+    if(currentPhoto===0) {
+        currentPhoto = viewer.length;
     }
     slideLeft();
 })
@@ -89,3 +107,18 @@ arrowRight.addEventListener ("click", function (){
     }
     slideRight();
 })
+
+ // vissza lép  
+ $('#images-box').on('click', '.previous', (event) => {
+    plusSlides(-1);
+  });
+  // előre lép
+  $('#images-box').on('click', '.next', (event) => {
+    plusSlides(1);
+  });
+
+  $(document).ready(function() {
+    $('.photoScroll img').click(function(e) {
+        $('.photoHolder img').attr("src", $(this).attr("src"));
+    })
+}); 
