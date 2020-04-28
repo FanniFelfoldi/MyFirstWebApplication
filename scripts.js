@@ -102,36 +102,31 @@ $("#left").click (() => {
 let data = ["first", "second", "third"];
 
 imagesData.forEach((item, index) => {
-    $('#photoScroll').append(`<div class="imageHolder" data-index="${index}">
+    $('#photoScroll').append(`
+    <div class="imageHolder" data-index="${index}">
     <img class="small1" id="imgSmall" src =${item.photo} data-index="${index}">
     <span class="textOver ">${item.title}</span>
     <p class="smallDescription">${item.description}</p>
     </div>`);
  
     $('.imageHolder').click((event) => {
-    let indexClicked = $(event.target).attr('data-index');
+    var indexClicked = $(event.target).attr('data-index');
     // indexClicked is now a string! if you need it as a number you have to change it
     // because for example "1" + 1 is going to be "11" and not 2
-    let numberIndex = parseInt(indexClicked);
+    var numberIndex = parseInt(indexClicked);
     // now numberIndex is a number
-    $('#clicked').text(data[indexClicked]);
+    
     $('.photoHolder img').attr('src', imagesData[indexClicked].photo);
     $('#title').text(imagesData[indexClicked].title);
     $('#description').text(imagesData[indexClicked].description);
     currentPhoto = indexClicked;
   });
 });
+function popUp(event) {
+    if (event.target.classList.contains("small1")) {
+        console.log(event.target);
+    }
+};
+document.getElementById("photoScroll").addEventListener('click', popUp)
 
-$('.imageHolder').click((event) => {
-    var indexClicked = $(event.target).attr('data-index');
-    // indexClicked is now a string! if you need it as a number you have to change it
-    // because for example "1" + 1 is going to be "11" and not 2
-    var numberIndex = parseInt(indexClicked);
-    // now numberIndex is a number
-    $('#clicked').text(data[indexClicked]);
-    $('.imageHolder img').attr('src', imagesData[indexClicked].photo);
-    $('.textOver').text(imagesData[indexClicked].title);
-    $('.smallDescription').text(imagesData[indexClicked].description);
-    currentPhoto = indexClicked;
-});
 
