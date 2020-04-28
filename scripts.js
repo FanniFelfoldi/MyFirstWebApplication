@@ -83,12 +83,14 @@ loadPhoto(currentPhoto);
 
 $('#right').click(() => {
     if (currentPhoto < 9) { currentPhoto++; }
+    if (currentPhoto === 9) { currentPhoto === 0; }
     loadPhoto(currentPhoto);
     loadTitle(currentPhoto);
     loadDescription(currentPhoto);
 });
 $("#left").click (() => {
     if (currentPhoto > 0) { currentPhoto--; }
+    if (currentPhoto === 0) { currentPhoto === 9; }
     loadPhoto(currentPhoto);
     loadTitle(currentPhoto);
     loadDescription(currentPhoto);
