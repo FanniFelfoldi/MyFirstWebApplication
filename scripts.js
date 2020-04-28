@@ -114,7 +114,7 @@ imagesData.forEach((item, index) => {
         // because for example "1" + 1 is going to be "11" and not 2
         var numberIndex = parseInt(indexClicked);
         // now numberIndex is a number
-        $('.photoHolder img').attr('src', imagesData[indexClicked].photo);
+        $('#photo').attr('src', imagesData[indexClicked].photo);
         $('#photo-title').text(imagesData[indexClicked].title);
         $('#photo-description').text(imagesData[indexClicked].description);
         currentPhoto = indexClicked;
