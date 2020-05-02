@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleGallery.css">
+</head>
+<body>
+    <div class="gallery" align="center">
+        
+            <h1>Photo gallery</h1>
+        
+       
+            <h3>Click on the thumbnails belowe to  make the image larger.</h3>
+        
+        <div id="slider">
+        <div id="box" class="viewer" align="center">
+            <button id="left"><img src="/images/arrow.svg" alt="arrow"></button>
+
+            <img id="photo" src="/images/biscottini.jpg" alt="Biscuits">
+                <div class="grayContainer">
+                    <h2 id="photo-title"></h2>
+                    <p id="photo-description"></p>
+                </div> 
+            <button id="right"><img src="/images/arrow.svg" alt="arrow"></button>
+        </div>
+    </div>
+
+    <div class="photoScroll" id="photoScroll">
+    </div>
+     
+    
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="scriptsGallery.js"></script>
+</body>
+</html>
